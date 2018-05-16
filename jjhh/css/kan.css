@@ -1,0 +1,372 @@
+html, body, ul, li, p, form, button {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 18px;
+	color: #333;
+	border: none;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5 {
+	padding: 0;
+	margin: 0;
+}
+img {
+	border: none;
+}
+a {
+	color: #f00;
+}
+.notice {
+	color: #f00;
+}
+.clearLine {
+	font-size: 1px;
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+}
+.price {
+	color: #f00;
+}
+body {
+	background-color: #efefef;
+}
+/*头部*/
+#header {
+	width: 100%;
+	height: 247px;
+	background: #e91a22 url("../images/kan_02.png") no-repeat center top;
+	height: 419px;
+}
+/*主体*/
+#content {
+	width: 1000px;
+	margin: 0 auto;
+}
+/*视频*/
+.videoAndNews {
+	background-color: #fff;
+	border: 1px solid #DFDFDF;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+    margin: 25px auto;
+    padding: 20px;
+    position: relative;
+}
+.video {
+	float: left;
+	height: 357px;
+	width: 450px;
+	position: relative;
+	padding: 0 26px;
+}
+.video .left, .video .right {
+	position: absolute;
+	border: 5px solid #b30f00;
+	border-right: none;
+	height: 347px;
+	width: 6px;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.video .right {
+	border: 5px solid #b30f00;
+	border-left: none;
+	left: auto;
+	right: 0;
+}
+.video .content {
+	padding: 12px 10px;
+	background-color: #bd0f00;
+	width: 430px;
+	height: 260px;
+}
+.video h2 {
+	background: url("../images/kan_06.png") no-repeat left top;
+	height: 28px;
+	padding-left: 90px;
+	font-weight: normal;
+	font-size: 12px;
+	margin-bottom: 12px;
+	line-height: 42px;
+}
+.videoAndNews .news {
+	float: right;
+	width: 435px;
+}
+.videoAndNews .news h2 {
+	color: #bd0f00;
+	font-size: 16px;
+	letter-spacing: 2px;
+	padding: 6px;
+	font-family: Microsoft YaHei, SimHei;
+	border-bottom: 2px solid #bd0f00;
+}
+.videoAndNews .news a {
+	text-decoration: none;
+	line-height: 36px;
+	font-size: 14px;
+	color: #000;
+}
+.videoAndNews .news a:hover {
+	text-decoration: underline;
+}
+.videoAndNews .news .first {
+	padding: 25px 0 15px;
+}
+.videoAndNews .news .first a {
+	color: #f50200;
+	font-family: SimHei;
+	line-height: 30px;
+	font-size: 24px;
+	text-align: center;
+	display: block;
+}
+.videoAndNews .news li.first em {
+	display: none;
+}
+.videoAndNews .news li em {
+	background: url("../images/icons.png") no-repeat -33px top;
+	width: 3px;
+	height: 6px;
+	margin: 0 10px;
+	display:inline-block;    /* firefox等标准浏览器识别*/
+ 	*display:inline;      /* 只有ie6和ie7识别*/
+	zoom:1;               /* 触发ie6和ie7下的haslayout */
+}
+.classSection {
+	margin: 30px auto;
+}
+.classSection h2 {
+	width: 958px;
+	margin: 20px auto 0;
+	position: relative;
+	padding-left: 40px;
+	color: #bd0f00;
+	font-size: 18px;
+	line-height: 44px;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+	border-bottom-left-radius: 0;
+	background-image: -moz-linear-gradient(#fff, #ddd);
+	background-image: linear-gradient(#fff, #ddd);
+	box-shadow: 1px 1px 2px #aeaeae;
+}
+.classSection h2 em {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #b30f00;
+	left: 20px;
+	top: 15px;
+	
+}
+.classSection .comment {
+	background-color: #fff;
+	padding: 20px;
+}
+.classSection li.tabToggle {
+	width: 455px;
+	height: 80px;
+	padding: 12px 10px;
+	border: 1px solid #f0edeb;
+	float: left;
+	margin-bottom: 6px;
+}
+.classSection li.tabToggle:nth-child(even) {
+	float: right;
+}
+.classSection li.tabToggle img.logo {
+	float: left;
+	margin-top: 12px;
+	margin-right: 12px;
+	boerder-radius: 4px;
+	width: 160px;
+	height: 60px;
+}
+.classSection li.tabToggle .buttonSection {
+	float: right;
+}
+.classSection li.tabToggle .middle {
+	padding-left: 80px;
+}
+.classSection li.tabToggle p.info, .classSection li.tabToggle .comments, .classSection li.tabToggle .commentList {
+	display: none;
+}
+.classSection li.tabToggle h3 {
+	display:inline-block;    /* firefox等标准浏览器识别*/
+ 	*display:inline;      /* 只有ie6和ie7识别*/
+	zoom:1;               /* 触发ie6和ie7下的haslayout */
+}
+.classSection li.tabToggle .buttonSection .btn{
+	background-color: #e41318;
+	background-image: -moz-linear-gradient(#c20005, #e41318);
+	background-image: linear-gradient(#c20005, #e41318);
+	color: #fff;
+	width: 80px;
+	line-height: 30px;
+	border-radius: 4px;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	margin: 22px auto 0;
+}
+.classSection li.tabToggle .buttonSection .look {
+	color: #f00;
+	margin: 12px auto;
+	text-align: center;
+	display: block;
+}
+.classSection li.tabToggle .wanted em {
+	font-style: normal;
+	color: #f00;
+	clear: right;	
+}
+.classSection li.tabToggle .link {
+	padding-right: 24px;
+	margin-top: 10px;
+	line-height: 24px;
+	color: #666;
+}
+.classSection li.tabToggle .comment {
+	padding: 0;
+}
+.classSection li.tabToggle .comment em {
+	font-style: normal;
+}
+.classSection li.tabToggle.active {
+	border: 5px solid #bd0f00;
+	width: 487px;
+	height: 421px;
+	padding: 0;
+	background-color: #f4f4f4;
+	float: left;
+}
+.classSection li.tabToggle.active .header {
+	border-bottom: 5px solid #f4f4f4;
+	clear: both;
+	padding: 14px 20px;
+	height: 88px;
+	position: relative;
+	z-index: 21;
+}
+.classSection li.tabToggle.active h3 {
+	clear: both;
+	margin: 20px 0 6px;
+}
+.classSection li.tabToggle.active .wanted {
+	float: left;
+	*width: 150px;
+	min-width: 150px;
+}
+.classSection li.tabToggle.active .buttonSection .btn {
+	margin: 24px auto 0;
+}
+.classSection li.tabToggle.active .buttonSection .look {
+	display: none;
+}
+.classSection li.tabToggle.active p.info, .classSection li.tabToggle.active .comments, .classSection li.tabToggle.active .commentList {
+	display:inline-block;    /* firefox等标准浏览器识别*/
+ 	*display:inline;      /* 只有ie6和ie7识别*/
+	zoom:1;               /* 触发ie6和ie7下的haslayout */
+}
+.classSection li.tabToggle.active .information {
+	border: 5px solid #bd0f00;
+	clear: both;
+	width: 930px;
+	padding: 10px 30px;
+	position: relative;
+	z-index: 20;
+	top: -5px;
+	left: -5px;
+	background-color: #f4f4f4;
+	height: 240px;
+}
+.classSection li.tabToggle.active .information li.section1 {
+	float: left;
+	width: 440px;
+}
+.classSection li.tabToggle.active .information li.section2 {
+	width: 450px;
+	float: right;
+}
+.classSection li.tabToggle.active p.info {
+	line-height: 22px;
+	margin-bottom: 25px;
+	clear: both;
+	width: 100%;
+}
+.classSection li.tabToggle.active .comments {
+	margin-top: 25px;
+	clear: both;
+	width: 100%;
+}
+.classSection li.tabToggle.active .comments textarea {
+	margin-top: 3px;
+	margin-bottom: 6px;
+	display: block;
+	clear: both;
+	font-size: 12px;
+	padding: 6px;
+	width: 425px;
+	min-height: 50px;
+}
+.classSection li.tabToggle.active .comments button {
+	background-image: -moz-linear-gradient(#fff, #ddd);
+	background-image: linear-gradient(#fff, #ddd);
+	float: right;
+	line-height: 24px;
+	width: 80px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	letter-spacing: 4px;
+}
+.classSection li.tabToggle.active .comment {
+	font-weight: bold;
+	color: #666;
+}
+.classSection li.tabToggle.active .commentList {
+	clear: both;
+	display: block;
+	padding: 6px 0 0;
+	height: 220px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.classSection li.tabToggle.active .commentList li {
+	width: 100%;
+	padding: 10px 0;
+	border-top: 1px solid #d9d9d9;
+}
+.classSection li.tabToggle.active .commentList li .userInfo {
+	float: left;
+	padding: 6px 12px;
+}
+.classSection li.tabToggle.active .commentList li .userInfo .userName {
+	clear: both;
+	display: block;
+	color: #505575;
+	font-weight: bold;
+}
+.classSection li.tabToggle.active .commentList li .userInfo .time {
+	clear: both;
+	display: block;
+}
+.classSection li.tabToggle.active .commentList li .commentInfo {
+	float: left;
+	padding: 6px 12px;
+	border-left: 1px solid #d9d9d9;
+	min-height: 36px;
+}
+
+
+
+
+
+
+
+
