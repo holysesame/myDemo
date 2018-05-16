@@ -1,0 +1,128 @@
+<!doctype html />
+<html>
+<head>
+<meta charset="utf-8" />
+<title>无标题文档</title>
+<link href="a.css" rel="stylesheet">
+<script src="jquery-1.10.2.min.js"></script>
+<script>
+$(function(){
+	var cishu=$("#cishu").val();
+	var speed=$("#speed").val();
+	var show=setTimeout(showNum,speed);
+	$(".digital li.refreshBox").on("click",function(e){
+//		var _this=$(this);
+//		_this.addClass("d");
+//		var t=setTimeout(function(){
+//			_this.removeClass("d");},200)
+		refreshBox();
+	})
+	$("#cishu").on("change",function(e){
+		refreshBox();
+		
+	})
+	$("#speed").on("change",function(e){
+		refreshBox();
+	})
+function _input(strcode,keycode){
+		var _class=".key"+keycode;
+		var _this=$(".digital li"+_class)
+		_this.addClass("d");
+		var t=setTimeout(function(){_this.removeClass("d");},200);
+		if(keycode===13){
+			//clearTimeout(show);
+		}
+		else {
+			$("#keyInput").append(strcode)
+		}
+		return false;
+}
+function refreshBox(){
+	c=0;
+	cishu=$("#cishu").val();
+	speed=$("#speed").val();
+	$(".showArea .box").html("")
+	$("#nShow").html("");
+	$("#keyInput").html("");
+	showNum();
+}
+var c=0;
+function showNum(){
+	c++;
+	var show=setTimeout(function(){
+		var n=Math.floor(Math.random()*10);
+		$(".showArea .box").html(n);
+		$("#nShow").append(n);
+		showNum();
+	},speed);
+	if(c >= cishu){window.clearTimeout(show);}
+}
+$(document).keypress(function(e){    
+	var keycode=e.which;
+	var strcode=String.fromCharCode(keycode); 
+	_input(strcode,keycode)
+});  
+})
+</script>
+</head>
+
+<body>
+<div class="showArea">
+<section>
+<h1>显示部分</h1>
+<label>次数：<input id="cishu" value="10" /></label><br>
+<label>速度：<input id="speed" value="100" /></label>
+<p class="box"></p>
+</section>
+</div>
+<div class="inputArea">
+<section>
+<h1>输入部分</h1>
+<div class="digital">
+<ol>
+<li class="refreshBox" data-keycode="0">Num Refresh</li>
+<li class="key47" data-keycode="47">/</li>
+<li class="key24" data-keycode="42">*</li>
+<li class="key55" data-keycode="55">7</li>
+<li class="key56" data-keycode="56">8</li>
+<li class="key57" data-keycode="57">9</li>
+<li class="key52" data-keycode="52">4</li>
+<li class="key53" data-keycode="53">5</li>
+<li class="key54" data-keycode="54">6</li>
+<li class="key49" data-keycode="49">1</li>
+<li class="key50" data-keycode="50">2</li>
+<li class="key51" data-keycode="51">3</li>
+<li class="merge key45" data-keycode="45">-</li>
+<li class="merge key43" data-keycode="43">+</li>
+<li class="merge key13" data-keycode="13">Enter</li>
+<li class="merge key48" data-keycode="48">0</li>
+<li class="merge key46" data-keycode="46">.</li>
+</ol>
+</div>
+</section>
+<!--<ol>
+<li class="key144" data-keycode="144">Num Lock</li>
+<li class="key111" data-keycode="111">/</li>
+<li class="key106" data-keycode="106">*</li>
+<li class="key103" data-keycode="103">7</li>
+<li class="key104" data-keycode="104">8</li>
+<li class="key105" data-keycode="105">9</li>
+<li class="key100" data-keycode="100">4</li>
+<li class="key101" data-keycode="101">5</li>
+<li class="key102" data-keycode="102">6</li>
+<li class="key97" data-keycode="97">1</li>
+<li class="key98" data-keycode="98">2</li>
+<li class="key99" data-keycode="99">3</li>
+<li class="merge key109" data-keycode="109">-</li>
+<li class="merge key107" data-keycode="107">+</li>
+<li class="merge key108" data-keycode="108">Enter</li>
+<li class="merge key96" data-keycode="96">0</li>
+<li class="merge key110" data-keycode="110">.</li>
+</ol>-->
+</div>
+<div class="inputBox">
+<p id="nShow"></p>
+<p id="keyInput"></p>
+</div>
+</body>
+</html>
